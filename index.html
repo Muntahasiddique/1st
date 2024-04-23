@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html forms</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oleo+Script:wght@400;700&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Demo Form</h1>
+    </header>
+    <main>
+    <!-- to enter data in other server code  action-->
+    <!-- method type of request sent on other website -->
+   <form action="/" method="GET" >
+    
+    <section>
+        <h2>Your personal details</h2>
+        <ul>
+            <li>
+                <label for="username">  your Name</label>
+                <input type="text" name="user-name" id="user-name" required>
+                
+            </li>
+            <li>
+                <label for="useremail">your Email</label>
+                <input type="email" name="user-email" id="useremail" required>
+            
+            </li>
+            <li>
+                <label for="userpass">your password</label>
+                <input type="password"   name="user-pass" id="userpass" required minlength="7">
+            </li>
+        </ul>      
+    </section>
+
+    <section>
+        <h2>More Detaials</h2>
+    <ul>
+        <li>
+            <label for="userage">your age</label>
+    <input type="number" step="1"  name="user-age" id="userage" required min="18" max=" 100" >
+        </li>
+        <li>
+            <label for="userbirth">your birthdate</label>
+            <input type="date"   name="user-birth" id="userbirth" required min="1921-01-01" max="2003-01-01">
+        </li>
+        <li>
+            <label for="favourite-color">Your favourite color?</label>
+    <select id="favourite-color" name="favourite-color"> 
+        <option value="blue" >My favurite color is Blue</option>
+        <option value="black" >My favurite color is black</option>
+        <option value="Red" >My favurite color is Red</option>
+    </select>
+
+        </li>
+    </ul>
+    </section>
+    
+    <section>
+        <label for="usermsg">your messsge</label>
+        <textarea name="user-msg" id="user-msg" cols="30" rows="10"></textarea>
+    
+    </section>
+    
+    
+    <section>
+        
+    </section>
+   
+    
+    
+   <!-- seperating line -->
+    <!-- <hr> -->
+    <section>
+        <h2>How should we varify our account</h2>
+        <ul>
+            <li>
+                <div class="form-control-inline">
+                    <input type="radio" name="verify" id="verify-text"  value="text-message" required>
+                    <label for="verify-text">Via text messsge</label>
+                    
+                   </div>
+            </li>
+            <li>
+                <div class="form-control-inline">
+                    <input type="radio" name="verify" id="verify-phone"  value="phone" required>
+                    <label for="verify-phone">Via phone call</label>
+                   </div>
+            </li>
+            <li>
+                <div class="form-control-inline">
+                    <input type="radio"  name="verify"id="verify-email"  value="email" required>
+                    <label for="verify-email">Via email</label>
+                </div>
+           
+            </li>
+        </ul>
+    
+    </section>
+
+    <section>
+        <h2>How should we contact you</h2>
+        <ul>
+            
+            <li class="form-control-inline">
+                <input type="checkbox"  name="terms"id="agree-terms" value="email"  >
+                <label for="agree-terms">contact me Via email</label>
+            </li>
+        </ul>
+       <hr>
+
+    </section>
+    <section>
+        <div class="form-control-inline">
+            <input type="checkbox"  name="terms"id="agree-terms"  >
+            <label for="agree-terms">Agree to terms?</label>
+        </div>
+    </section>
+   
+<section>
+    <button type="reset">clear</button>
+    
+    <button type="submit">submit</button>
+
+</section>
+
+</form>
+    </main>
+    
+</body>
+</html>
